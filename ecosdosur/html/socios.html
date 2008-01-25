@@ -1,0 +1,75 @@
+<table border='0' cellpadding='2' cellspacing='2' align='center' class='clTablaEdicion'>
+	<tr>
+		<td width="15%"></td>
+		<td width="30%"></td>
+		<td width="20%"></td>
+		<td width="35%"></td>
+	</tr>
+	<tr>
+		<td align="right">Número</td>
+		<td align="left" colspan="3"><input type='text' id='NSOCIO' size='20' class='inputTexto' readonly='readonly' /></td>
+	</tr>
+	<tr>
+		<td colspan="4" height="12px"></td>
+	</tr>
+	<tr>
+		<td align="right">Referencia</td>
+		<td align="left"><input type='text' id='REFERENCIA' size='20' class='inputTexto'  /></td>
+		<td align="right">Número de orden</td>
+		<td align="left"><input type='text' id='NORDEN' size='20' class='inputTexto'  /></td>
+	</tr>
+	<tr>
+		<td align="right">Tratamiento</td>
+		<td align="left"><input type='text' id='TRATAMIENTO' size='20' maxlength='50' class='inputTexto'  /></td>
+		<td align="right">D.N.I.</td>
+		<td align="left"><input type='text' id='DNI' size='30' maxlength='255' class='inputTexto'  /></td>
+	</tr>
+	<tr>
+		<td align="right">Nombre</td>
+		<td align="left"><input type='text' id='NOMBRE' size='20' maxlength='50' class='inputTextoObligatorio'  /></td>
+		<td align="right">Apellidos</td>
+		<td align="left"><input type='text' id='APELLIDOS' size='30' maxlength='255' class='inputTextoObligatorio'  /></td>
+	</tr>
+	<tr>
+		<td align="right">Dirección</td>
+		<td align="left" colspan="3"><input type='text' id='DIRECCION' size='80' maxlength='255' class='inputTexto'  /></td>
+	</tr>
+	<tr>
+		<td align="right">Código Postal</td>
+		<td align="left" colspan="3"><input type='text' id='CODPOSTAL' size='20' class='inputTexto'  /></td>
+	</tr>
+	<tr>
+		<td align="right">Localidad</td>
+		<td align="left" colspan="3"><input type='text' id='LOCALIDAD' size='80' maxlength='255' class='inputTexto'  /></td>
+	</tr>
+	<tr>
+		<td align="right">Municipio</td>
+		<td align="left"><select id='CODMUNICIPIO' class='inputTexto'><option value=''></option></select></td>
+		<td align="right">Provincia</td>
+		<td align="left"><select id='CODPROV' class='inputTexto'><option value=''></option></select></td>
+	</tr>
+	<tr>
+		<td align="right">Núm. Cuenta</td>
+		<td align="left" colspan="3"><input type='text' id='NCUENTA' size='80' maxlength='50' class='inputTexto'  /></td>
+	</tr>
+	<tr>
+		<td align="right">Teléfono 1</td>
+		<td align="left"><input type='text' id='TELEFONO1' size='20' maxlength='20' class='inputTexto'  /></td>
+		<td align="right">Teléfono 2</td>
+		<td align="left"><input type='text' id='TELEFONO2' size='20' maxlength='20' class='inputTexto'  /></td>
+	</tr>
+	<tr>
+		<td align="right">Fecha de alta</td>
+		<td align="left"><input type='text' id='FECHAALTA' size='12' maxlength='10' class='inputTextoObligatorio' style='text-align: center'  /><img id="cal_FECHAALTA" src='img/calendario20.gif' style='cursor: pointer;' onclick="return showCalendar('FECHAALTA', '%d/%m/%Y');"/></td>
+		<td align="right">Correo electrónico</td>
+		<td align="left"><input type='text' id='EMAIL' size='30' maxlength='50' class='inputTexto'  /></td>
+	</tr>
+	<tr>
+		<td align="right">Observaciones</td>
+		<td align="left" colspan="3"><textarea id='OBSERVACIONES' class='inputTexto' rows='3' cols='80'  onkeypress="javascript: return edicion.controlMaxLength(this, event, 255);" ></textarea></td>
+	</tr>
+</table>
+
+<table border='0' cellpadding='2' cellspacing='2' align='center' class='clTablaEdicion' style="display: none;">
+
+</table>

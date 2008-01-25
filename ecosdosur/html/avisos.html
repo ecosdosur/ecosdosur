@@ -1,0 +1,50 @@
+<table border='0' cellpadding='2' cellspacing='2' align='center' class='clTablaEdicion'>
+	<tr>
+		<td width="20%"></td>
+		<td width="18%"></td>
+		<td width="17%"></td>
+		<td width="45%"></td>
+	</tr>
+	<tr>
+		<td colspan="4" align="center"><b><font size="5">AVISOS DE OFERTAS</font></b></td>
+	</tr>
+	<tr>
+		<td height="10px" colspan="4"></td>
+	</tr>
+	<tr>
+		<td align="right">Nº aviso</td>
+		<td align="left" colspan="3"><input type='text' id='NAVISO' size='20' class='inputTexto' readonly='readonly' /></td>
+	</tr>
+	<tr>
+		<td align="right">Oferta y empleador</td>
+		<td align="left" colspan="3"><input type='text' id='CODOFERTA' size='15' class='inputTextoObligatorio' readonly='readonly' /><input type='text' id='DESCEMPLEADOR' size='50' class='inputTextoObligatorio' readonly='readonly' /><input type='button' class='boton' style='width: 30px;' id='btn_CODOFERTA' value='...' onmouseover="javascript: if ( !this.disabled ) { this.className='botonOver'; };" onmouseout="javascript: this.className='boton';" onclick="javascript: edicion.abrirLista('OFERTAS', 'CODOFERTA|DESCEMPLEADOR');" /><input type='button' class='boton' id='btnDel_CODOFERTA' style='width: 30px;' value=' X ' onmouseover="javascript: if ( !this.disabled ) { this.className='botonOver'; };" onmouseout="javascript: this.className='boton';" onclick="javascript: edicion.borrarRelacionado('CODOFERTA', 'DESCEMPLEADOR');" /></td>
+	</tr>
+	<tr>
+		<td align="right">Demandante</td>
+		<td align="left" colspan="3"><input type='text' id='HISTORIAL' size='15' class='inputTextoObligatorio' readonly='readonly' /><input type='text' id='DESCHISTORIAL' size='50' class='inputTextoObligatorio' readonly='readonly' /><input type='button' class='boton' style='width: 30px;' id='btn_HISTORIAL' value='...' onmouseover="javascript: if ( !this.disabled ) { this.className='botonOver'; };" onmouseout="javascript: this.className='boton';" onclick="javascript: edicion.abrirLista('DEMANDANTE', 'HISTORIAL|DESCHISTORIAL');" /><input type='button' class='boton' style='width: 30px;' id='btnDel_HISTORIAL' value=' X ' onmouseover="javascript: if ( !this.disabled ) { this.className='botonOver'; };" onmouseout="javascript: this.className='boton';" onclick="javascript: edicion.borrarRelacionado('HISTORIAL', 'DESCHISTORIAL');" /></td>
+	</tr>
+	<tr>
+		<td align="right">Modo de Aviso</td>
+		<td align="left" colspan="3"><input type='text' id='MODOAVISO' size='76' maxlength='50' class='inputTexto'  /></td>
+	</tr>
+	<tr>
+		<td align="right"><input type='checkbox' id='AVISADO' /></td>
+		<td align="left">Avisado</td>
+		<td align="right">Fecha aviso</td>
+		<td align="left"><input type='text' id='FECHAAVISO' size='12' maxlength='10' class='inputTexto' style='text-align: center'  /><img id='cal_FECHAAVISO' src='img/calendario20.gif' style='cursor: pointer;' onclick="return showCalendar('FECHAAVISO', '%d/%m/%Y');"/></td>
+	</tr>
+	<tr>
+		<td align="right"><input type='checkbox' id='PTECONFIRM' /></td>
+		<td align="left" colspan="3">Pendiente confirmación</td>
+	</tr>
+	<tr>
+		<td align="right"><input type='checkbox' id='ACEPTA' /></td>
+		<td align="left">Acepta</td>
+		<td align="right">Fecha contratación</td>
+		<td align="left"><input type='text' id='FECHACONF' size='12' maxlength='10' class='inputTexto' style='text-align: center'  /><img id='cal_FECHACONF' src='img/calendario20.gif' style='cursor: pointer;' onclick="return showCalendar('FECHACONF', '%d/%m/%Y');"/></td>
+	</tr>
+	<tr>
+		<td align="right"><input type='checkbox' id='CONTRATADO' /></td>
+		<td align="left" colspan="3">Contratado</td>
+	</tr>
+</table>

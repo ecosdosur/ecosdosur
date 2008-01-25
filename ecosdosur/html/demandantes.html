@@ -1,0 +1,108 @@
+<table border='0' cellpadding='5' cellspacing='0' align='center' class='clTablaEdicion' width="100%">
+	<tr>
+		<td width="25%"></td>
+		<td width="30%"></td>
+		<td width="15%"></td>
+		<td width="30%"></td>
+	</tr>
+	<tr>
+		<td colspan="4" align="center"><b><font size="5">FICHA SOLI INCLUSIÓN</font></b></td>
+	</tr>
+	<tr>
+		<td colspan="4" align="center"><b>(REALIZARLA SÓLO EN CASO DE QUE DEMANDE TRABAJO)</b></td>
+	</tr>
+	<tr>
+		<td height="10px" colspan="4"></td>
+	</tr>
+	<tr>
+		<td align="right"><b>Usuario</b></td>
+		<td align="left" colspan="3"><input type='text' id='HISTORIAL' size='15' maxlength='50' class='inputTextoObligatorio' readonly='readonly' /><input type='text' id='DESCHISTORIAL' size='40' class='inputTextoObligatorio' readonly='readonly' /><input type='button' class='boton' style='width: 30px;' id='btn_HISTORIAL' value='...' onmouseover="javascript: if ( !this.disabled ) { this.className='botonOver'; };" onmouseout="javascript: this.className='boton';" onclick="javascript: edicion.abrirLista('USUARIOSEC', 'HISTORIAL|DESCHISTORIAL');" /><input type='button' class='boton' style='width: 30px;' id='btnDel_HISTORIAL' value=' X ' onmouseover="javascript: if ( !this.disabled ) { this.className='botonOver'; };" onmouseout="javascript: this.className='boton';" onclick="javascript: edicion.borrarRelacionado('HISTORIAL', 'DESCHISTORIAL');" /></td>
+	</tr>
+	<tr>
+		<td align="right">No disponible</td>
+		<td align="left" colspan="3"><input type='radio' id='NODISPONIBLE_S' onclick='javascript: this.checked = true; document.getElementById("NODISPONIBLE_N").checked = false;' />Sí<input type='radio' id='NODISPONIBLE_N' onclick='javascript: this.checked = true; document.getElementById("NODISPONIBLE_S").checked = false;' />No</td>
+	</tr>
+	<tr>
+		<td align="right" colspan="2">En caso de no tener teléfono móvil</td>
+		<td align="left" colspan="2"><input type='text' id='MODOCONECTAR' size='38' maxlength='50' class='inputTexto'  /></td>
+	</tr>
+	<tr>
+		<td align="right">Experiencia profesional</td>
+		<td align="left" colspan="3"><textarea id='EXPPROFES' class='inputTexto' rows='3' cols='72' onkeypress="javascript: return edicion.controlMaxLength(this, event, 1000);" ></textarea></td>
+	</tr>
+	<tr>
+		<td align="right">Formación</td>
+		<td align="left" colspan="3"><textarea id='FORMACION' class='inputTexto' rows='3' cols='72'  onkeypress="javascript: return edicion.controlMaxLength(this, event, 255);" ></textarea></td>
+	</tr>
+	<tr>
+		<td align="right">Demanda específica laboral</td>
+		<td align="left" colspan="3"><select id='CTIPODEMLAB' class='inputTexto' ><option value=''></option></select></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td align="right">En caso de mejora de empleo</td>
+		<td align="left" colspan="2"><textarea id='MEJORAEMPLEO' class='inputTexto' rows='2' cols='38'  onkeypress="javascript: return edicion.controlMaxLength(this, event, 255);" ></textarea></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td align="right">Otros. Especificar</td>
+		<td align="left" colspan="2"><textarea id='MEJORAOTROS' class='inputTexto' rows='2' cols='38'  onkeypress="javascript: return edicion.controlMaxLength(this, event, 255);" ></textarea></td>
+	</tr>
+	<tr>
+		<td align="right">Anotaciones específicas</td>
+		<td align="left" colspan="3"><textarea id='ANOTESPEC' class='inputTexto' rows='3' cols='72'  onkeypress="javascript: return edicion.controlMaxLength(this, event, 1000);" ></textarea></td>
+	</tr>
+	<tr>
+		<td align="right">Horario de trabajo NO DISPONIBLE</td>
+		<td align="left" colspan="3"><input type='text' id='HORASNOTRAB' size='72' maxlength='50' class='inputTexto'  /></td>
+	</tr>
+	<tr>
+		<td align="right">Días de trabajo NO DISPONIBLE</td>
+		<td align="left" colspan="3"><input type='text' id='DIASNOTRAB' size='72' maxlength='50' class='inputTexto'  /></td>
+	</tr>
+	<tr>
+		<td align="right">Disponibilidad para viajar</td>
+		<td align="left" colspan="3"><select id='CTIPODISPV' class='inputTexto' ><option value=''></option></select></td>
+	</tr>
+	<tr>
+		<td align="right">Trabajo de interna</td>
+		<td align="left" colspan="3"><input type='radio' id='TRABINT_S' onclick='javascript: this.checked = true; document.getElementById("TRABINT_N").checked = false;' />Sí<input type='radio' id='TRABINT_N' onclick='javascript: this.checked = true; document.getElementById("TRABINT_S").checked = false;' />No</td>
+	</tr>
+	<tr>
+		<td align="right">Disponibilidad</td>
+		<td align="left" colspan="3">
+			<input type='checkbox' id='DISP1' />&nbsp;Mañana&nbsp;&nbsp;&nbsp;
+			<input type='checkbox' id='DISP2' />&nbsp;Tarde&nbsp;&nbsp;&nbsp;
+			<input type='checkbox' id='DISP3' />&nbsp;Noche&nbsp;&nbsp;&nbsp;
+			<input type='checkbox' id='DISP4' />&nbsp;Total
+		</td>
+	</tr>
+	<tr>
+		<td align="right">¿Carnet de conducir en España?</td>
+		<td align="left"><input type='radio' id='CARNETESP_S' onclick='javascript: this.checked = true; document.getElementById("CARNETESP_N").checked = false;' />Sí<input type='radio' id='CARNETESP_N' onclick='javascript: this.checked = true; document.getElementById("CARNETESP_S").checked = false;' />No</td>
+		<td align="right">Tipo de carnet</td>
+		<td align="left"><input type='text' id='TIPOCARNET' size='10' maxlength='20' class='inputTexto'  /></td>
+	</tr>
+	<tr>
+		<td align="right">Disponibilidad de vehículo</td>
+		<td align="left" colspan="3"><input type='radio' id='DISPVEHICULO_S' onclick='javascript: this.checked = true; document.getElementById("DISPVEHICULO_N").checked = false;' />Sí<input type='radio' id='DISPVEHICULO_N' onclick='javascript: this.checked = true; document.getElementById("DISPVEHICULO_S").checked = false;' />No</td>
+	</tr>
+	<tr>
+		<td align="left" colspan="4">&nbsp;&nbsp;Trabajos en los que NO desea trabajar</td>
+	</tr>
+	<tr>
+		<td align="left" colspan="4">&nbsp;&nbsp;<textarea id='TRABAJOSNO' class='inputTexto' rows='3' cols='99'  onkeypress="javascript: return edicion.controlMaxLength(this, event, 255);" ></textarea></td>
+	</tr>
+	<tr>
+		<td align="left" colspan="4">&nbsp;&nbsp;Trabajos en los que desea trabajar</td>
+	</tr>
+	<tr>
+		<td align="left" colspan="4">&nbsp;&nbsp;<textarea id='TRABAJOSSI' class='inputTexto' rows='3' cols='99'  onkeypress="javascript: return edicion.controlMaxLength(this, event, 255);" ></textarea></td>
+	</tr>
+	<!--
+	<tr>
+		<td align="right">Avisos de ofertas</td>
+		<td align="left" colspan="3"><input type='text' id='AVISOSOFERTAS' size='73' maxlength='50' class='inputTexto'  /></td>
+	</tr>
+	-->
+</table>

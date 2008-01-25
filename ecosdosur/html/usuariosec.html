@@ -1,0 +1,454 @@
+<table cellpadding="5px" width="100%"><tr><td>
+<div style="text-align: center;">
+	<span style="font-size: 18px; font-weight: bold;">FICHA DE ACOGIDA DE LOS USUARIOS</span>
+</div>
+<br />
+<div id="pestanas">
+	<table border="0" style="width: 100%;" align="center" cellspacing="0" cellpadding="0">
+		<tr>
+			<td>
+				<div id="pestana1" class="clPestanaActiva" onclick="javascript: edicion.irAPestana(1);">General</div>
+			</td>
+			<td width="4px"></td>
+			<td>
+				<div id="pestana2" class="clPestanaInactiva" onclick="javascript: edicion.irAPestana(2);">Personal</div>
+			</td>
+			<td width="4px"></td>
+			<td>
+				<div id="pestana3" class="clPestanaInactiva" onclick="javascript: edicion.irAPestana(3);">Convivencia</div>
+			</td>
+			<td width="4px"></td>
+			<td>
+				<div id="pestana4" class="clPestanaInactiva" onclick="javascript: edicion.irAPestana(4);">Familia</div>
+			</td>
+			<td width="4px"></td>
+			<td>
+				<div id="pestana5" class="clPestanaInactiva" onclick="javascript: edicion.irAPestana(5);">Social</div>
+			</td>
+			<td width="4px"></td>
+			<td>
+				<div id="pestana6" class="clPestanaInactiva" onclick="javascript: edicion.irAPestana(6);">Profes. y eco.</div>
+			</td>
+			<td width="4px"></td>
+			<td>
+				<div id="pestana7" class="clPestanaInactiva" onclick="javascript: edicion.irAPestana(7);">Sanitario</div>
+			</td>
+			<td width="4px"></td>
+			<td>
+				<div id="pestana8" class="clPestanaInactiva" onclick="javascript: edicion.irAPestana(8);">Jurídico</div>
+			</td>
+			<td width="4px"></td>
+			<td>
+				<div id="pestana9" class="clPestanaInactiva" onclick="javascript: edicion.irAPestana(9);">Demandas</div>
+			</td>
+		</tr>
+	</table>
+</div>
+<div id="panelPestana1" class="clPanelPestana" style="display: block;" >
+	<table border='0' style="width: 100%;"  align='center' cellpadding='2' cellspacing='2' class='clTablaEdicion'>
+		<tr>
+			<td width="25%"></td>
+			<td width="30%"></td>
+			<td width="15%"></td>
+			<td width="30%"></td>
+		</tr>
+		<tr>
+			<td align="right">Historial</td>
+			<td align="left"><input type='text' id='HISTORIAL' size='25' maxlength='50' class='inputTextoObligatorio'  /></td>
+			<td align="right">Programa MIRGA</td>
+			<td align="left"><input type='radio' id='PROGMIRGA_S' onclick='javascript: this.checked = true; document.getElementById("PROGMIRGA_N").checked = false;' />Sí<input type='radio' id='PROGMIRGA_N' onclick='javascript: this.checked = true; document.getElementById("PROGMIRGA_S").checked = false;' />No</td>
+		</tr>
+		<tr>
+			<td align="right">Entrevistador</td>
+			<td align="left"><input type="text" id='ENTREVISTADOR' class='inputTextoObligatorio' size="30" maxlength="255" /></textarea></td>
+			<td align="right">Tipo de Migrante</td><td align="left"><select id='CTIPOMIGRANTE' class='inputTextoObligatorio' ><option value=''></option></select></td>
+		</tr>
+		<tr>
+			<td align="right">Fecha de acogida</td>
+			<td align="left" colspan="3"><input type='text' id='FECHAACOGIDA' size='12' maxlength='10' class='inputTexto' style='text-align: center' /><img id="cal_FECHAACOGIDA" src='img/calendario20.gif' style='cursor: pointer;' onclick="return showCalendar('FECHAACOGIDA', '%d/%m/%Y');"/></td>
+		</tr>
+		<tr>
+			<td align="right">Expedientes afines</td>
+			<td align="left" colspan="3">
+				<input type='text' id='EXPAFINES1' size='20' maxlength='50' class='inputTexto'  />
+				<input type='text' id='EXPAFINES2' size='20' maxlength='50' class='inputTexto'  />
+				<input type='text' id='EXPAFINES3' size='20' maxlength='50' class='inputTexto'  />
+			</td>
+		</tr>
+		<tr>
+			<td align="right">¿Es la primera vez que acude a Ecos do Sur?</td>
+			<td align="left"><input type='radio' id='PRIMERAVEZ_S' onclick='javascript: this.checked = true; document.getElementById("PRIMERAVEZ_N").checked = false;' />Sí<input type='radio' id='PRIMERAVEZ_N' onclick='javascript: this.checked = true; document.getElementById("PRIMERAVEZ_S").checked = false;' />No</td>
+			<td align="right">¿Desde cuándo es usuario?</td>
+			<td align="left"><input type='text' id='ANTIGUEDAD' size='15' class='inputTexto'  /></td>
+		</tr>
+		<tr>
+			<td align="right">¿Cómo conoció la asociación?</td>
+			<td align="left" colspan="3"><select id='CTIPOCONOC' class='inputTexto' ><option value=''></option></select></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td align="left">Otros. Especificar</td>
+			<td align="left" colspan="2"><input type='text' id='OTROSCONOC' size='40' maxlength='100' class='inputTexto'  /></td>
+		</tr>
+		<tr>
+			<td align="right">¿Viene derivado de otra institución o asociación?</td>
+			<td align="left" colspan="3"><input type='radio' id='DERIVADO_S' onclick='javascript: this.checked = true; document.getElementById("DERIVADO_N").checked = false;' />Sí<input type='radio' id='DERIVADO_N' onclick='javascript: this.checked = true; document.getElementById("DERIVADO_S").checked = false;' />No</td>
+		</tr>
+		<tr>
+			<td></td>
+			<td align="left">En caso afirmativo, ¿de cuál?</td>
+			<td align="left" colspan="2"><input type='text' id='DERIVADOCUAL' size='40' maxlength='50' class='inputTexto'  /></td>
+		</tr>
+	</table>
+</div>
+<div id="panelPestana2" class="clPanelPestana" style="display: none;">
+	<table border='0' cellpadding='2' cellspacing='2' align='center' class='clTablaEdicion'>
+		<tr>
+			<td width="20%"></td>
+			<td width="30%"></td>
+			<td width="20%"></td>
+			<td width="30%"></td>
+		</tr>
+		<tr>
+			<td align="right">Tipo de documento</td>
+			<td align="left"><select id='CTIPOIDENT' class='inputTextoObligatorio' ><option value=''></option></select></td>
+			<td align="right">Nº documento</td>
+			<td align="left"><input type='text' id='NUMDOCUM' size='25' maxlength='50' class='inputTextoObligatorio'  /></td>
+		</tr>
+		<tr>
+			<td align="right">Apellidos</td>
+			<td align="left"><input type="text" id='APELLIDOS' class='inputTextoObligatorio' size="30" maxlength="255" /></td>
+			<td align="right">Nombre</td>
+			<td align="left"><input type="text" id='NOMBRE' class='inputTextoObligatorio' size="30" maxlength="255" /></td>
+		</tr>		
+		<tr>
+			<td align="right">Sexo</td><td align="left"><input type='radio' id='SEXO_H' onclick='javascript: this.checked = true; document.getElementById("SEXO_M").checked = false;' />Hombre<input type='radio' id='SEXO_M' onclick='javascript: this.checked = true; document.getElementById("SEXO_H").checked = false;' />Mujer</td>
+			<td align="right">Fecha de nacimiento</td><td align="left"><input type='text' id='FECHANAC' size='12' maxlength='10' class='inputTexto' style='text-align: center'  /><img id="cal_FECHANAC" src='img/calendario20.gif' style='cursor: pointer;' onclick="return showCalendar('FECHANAC', '%d/%m/%Y');"/></td>
+		</tr>
+		<tr>
+			<td align="right">¿Tiene permiso de residencia?</td>
+			<td align="left"><input type='radio' id='PERMRES_S' onclick='javascript: this.checked = true; document.getElementById("PERMRES_N").checked = false;' />Sí<input type='radio' id='PERMRES_N' onclick='javascript: this.checked = true; document.getElementById("PERMRES_S").checked = false;' />No</td>
+			<td align="right">¿Y permiso de trabajo?</td><td align="left"><input type='radio' id='PERMTRAB_S' onclick='javascript: this.checked = true; document.getElementById("PERMTRAB_N").checked = false;' />Sí<input type='radio' id='PERMTRAB_N' onclick='javascript: this.checked = true; document.getElementById("PERMTRAB_S").checked = false;' />No</td>
+		</tr>
+		<tr>
+			<td align="right">Tipo de permiso</td>
+			<td align="left"><input type="text" id='TIPOPERM' class='inputTexto' size="30" maxlength="255" /></td>
+			<td align="right">Validez hasta</td>
+			<td align="left"><input type='text' id='FECHAVALPERM' size='12' maxlength='10' class='inputTexto' style='text-align: center'  /><img id="cal_FECHAVALPERM" src='img/calendario20.gif' style='cursor: pointer;' onclick="return showCalendar('FECHAACOGIDA', '%d/%m/%Y');"/></td>
+		</tr>
+		<tr>
+			<td align="right">País de nacimiento</td><td align="left"><select id='CODPAIS' class='inputTexto' ><option value=''></option></select></td>
+			<td align="right">Área geográfica</td><td align="left"><select id='CODAREA' class='inputTexto' ><option value=''></option></select></td>
+		</tr>
+		<tr>
+			<td align="right">Nacionalidad</td>
+			<td align="left"><select id='CODNACIONAL' class='inputTexto' ><option value=''></option></select></td>
+			<td align="right">Teléfono(s)</td>
+			<td align="left"><input type='text' id='TELEFONO1' size='13' class='inputTexto'  />&nbsp;<input type='text' id='TELEFONO2' size='13' class='inputTexto'  /></td>
+		</tr>
+		<tr>
+			<td align="right">Domicilio actual</td>
+			<td align="left" colspan="3"><input type="text" id='DOMICILIO' class='inputTexto' size="86" maxlength="255" /></td>
+		</tr>
+		<tr>
+			<td align="right">Localidad</td>
+			<td align="left" colspan="3"><input type="text" id='LOCALIDAD' class='inputTexto' size="86" maxlength="255" /></td>
+		</tr>
+		<tr>
+			<td align="right">Municipio</td>
+			<td align="left"><select id='CODMUNICIPIO' class='inputTexto' ><option value=''></option></select></td>
+			<td align="right">Provincia</td>
+			<td align="left"><select id='CODPROV' class='inputTexto' ><option value=''></option></select></td>
+		</tr>
+		<tr>
+			<td align="right">C.P.</td><td align="left"><input type='text' id='CODPOST' size='30' maxlength='50' class='inputTexto'  /></td>
+			<td align="right">Correo electrónico</td><td align="left"><input type='text' id='EMAIL' size='30' maxlength='255' class='inputTexto'  /></td>
+		</tr>
+	</table>
+</div>
+<div id="panelPestana3" class="clPanelPestana" style="display: none;">
+	<table border='0' cellpadding='2' cellspacing='2' align='center' class='clTablaEdicion'>
+		<tr>
+			<td width="35%"></td>
+			<td width="20%"></td>
+			<td width="15%"></td>
+			<td width="30%"></td>
+		</tr>
+		<tr>
+			<td align="right">¿Convive con alguien?</td>
+			<td align="left" colspan="3"><input type='radio' id='CONVIVE_S' onclick='javascript: this.checked = true; document.getElementById("CONVIVE_N").checked = false;' />Sí<input type='radio' id='CONVIVE_N' onclick='javascript: this.checked = true; document.getElementById("CONVIVE_S").checked = false;' />No</td>
+		</tr>
+		<tr>
+			<td align="right">Número de personas</td>
+			<td align="left"><input type='text' id='NUMPERSCONV' size='20' maxlength='255' class='inputTexto'  /></td>
+			<td align="right">Relación</td>
+			<td align="left"><input type='text' id='RELACION' size='30' maxlength='50' class='inputTexto'  /></td>
+		</tr>
+		<tr>
+			<td align="right" colspan="3">¿Considera que la vivienda cuenta con las condiciones mínimas de habitabilidad?</td>
+			<td align="left" colspan="1"><input type='radio' id='VIVIENDAOK_S' onclick='javascript: this.checked = true; document.getElementById("VIVIENDAOK_N").checked = false;' />Sí<input type='radio' id='VIVIENDAOK_N' onclick='javascript: this.checked = true; document.getElementById("VIVIENDAOK_S").checked = false;' />No</td>
+		</tr>
+		<tr>
+			<td align="right">¿Tiene pensado cambiar de domicilio próximamente?</td>
+			<td align="left"><input type='radio' id='CAMBIODOM_S' onclick='javascript: this.checked = true; document.getElementById("CAMBIODOM_N").checked = false;' />Sí<input type='radio' id='CAMBIODOM_N' onclick='javascript: this.checked = true; document.getElementById("CAMBIODOM_S").checked = false;' />No</td>
+			<td align="right">¿Y de residencia?</td><td align="left"><input type='radio' id='CAMBIORES_S' onclick='javascript: this.checked = true; document.getElementById("CAMBIORES_N").checked = false;' />Sí<input type='radio' id='CAMBIORES_N' onclick='javascript: this.checked = true; document.getElementById("CAMBIORES_S").checked = false;' />No</td>
+		</tr>
+		<tr>
+			<td align="right">Tipo de tenencia</td>
+			<td align="left" colspan="3"><select id='CTIPOTENENCIA' class='inputTexto' ><option value=''></option></select></td>
+		</tr>
+	</table>
+</div>
+<div id="panelPestana4" class="clPanelPestana" style="display: none;">
+	<table border='0' cellpadding='2' cellspacing='2' align='center' class='clTablaEdicion'>
+		<tr>
+			<td width="25%"></td>
+			<td width="20%"></td>
+			<td width="25%"></td>
+			<td width="30%"></td>
+		</tr>
+		<tr>
+			<td align="right">Estado civil</td>
+			<td align="left" colspan="3"><select id='CTIPOECIVIL' class='inputTexto' ><option value=''></option></select></td>
+		</tr>
+		<tr>
+			<td align="right">En caso de tener pareja, ¿dónde reside?</td>
+			<td align="left" colspan="3"><input type='text' id='RESIDPAREJA' size='80' maxlength='255' class='inputTexto'  /></td>
+		</tr>
+		<tr>
+			<td align="right">¿Su pareja es usuaria de Ecos do Sur?</td><td align="left"><input type='radio' id='PAREJAECOS_S' onclick='javascript: this.checked = true; document.getElementById("PAREJAECOS_N").checked = false;' />Sí<input type='radio' id='PAREJAECOS_N' onclick='javascript: this.checked = true; document.getElementById("PAREJAECOS_S").checked = false;' />No</td>
+			<td align="right">Nº de hijos</td><td align="left"><input type='text' id='NUMHIJOS' size='30' class='inputTexto'  /></td>
+		</tr>
+		<tr>
+			<td align="right">Edad de los hijos</td>
+			<td align="left" colspan="3"><input type='text' id='EDADHIJO1' size='8' class='inputTexto'  />&nbsp;<input type='text' id='EDADHIJO2' size='8' class='inputTexto'  />&nbsp;<input type='text' id='EDADHIJO3' size='8' class='inputTexto'  />&nbsp;<input type='text' id='EDADHIJO4' size='8' class='inputTexto'  /></td>
+		</tr>
+		<tr>
+			<td align="right">Lugar donde residen los hijos</td>
+			<td align="left" colspan="3"><input type='text' id='RESIDHIJOS' size='80' maxlength='255' class='inputTexto'  /></td>
+		</tr>
+		<tr>
+			<td align="right" colspan="2">Si están en España, ¿están escolarizados?</td>
+			<td align="left" colspan="2"><input type='radio' id='ESCOLARHIJOS_S' onclick='javascript: this.checked = true; document.getElementById("ESCOLARHIJOS_N").checked = false;' />Sí<input type='radio' id='ESCOLARHIJOS_N' onclick='javascript: this.checked = true; document.getElementById("ESCOLARHIJOS_S").checked = false;' />No</td>
+		</tr>
+		<tr>
+			<td align="right" colspan="2">¿Cuenta con algún familiar residiendo en España?</td>
+			<td align="left" colspan="2"><input type='radio' id='FAMILIAESP_S' onclick='javascript: this.checked = true; document.getElementById("FAMILIAESP_N").checked = false;' />Sí<input type='radio' id='FAMILIAESP_N' onclick='javascript: this.checked = true; document.getElementById("FAMILIAESP_S").checked = false;' />No</td>
+		</tr>
+		<tr>
+			<td align="right" colspan="2">¿Tiene pensado traer a otros familiares?</td>
+			<td align="left" colspan="2"><input type='radio' id='TRAERFAMILIAR_S' onclick='javascript: this.checked = true; document.getElementById("TRAERFAMILIAR_N").checked = false;' />Sí<input type='radio' id='TRAERFAMILIAR_N' onclick='javascript: this.checked = true; document.getElementById("TRAERFAMILIAR_S").checked = false;' />No</td>
+		</tr>
+	</table>
+</div>
+<div id="panelPestana5" class="clPanelPestana" style="display: none;">
+	<table border='0' cellpadding='2' cellspacing='2' align='center' class='clTablaEdicion'>
+		<tr>
+			<td width="35%"></td>
+			<td width="10%"></td>
+			<td width="35%"></td>
+			<td width="20%"></td>
+		</tr>
+		<tr>
+			<td align="right">Después de salir de su país, ¿A Coruña fue si primer destino?</td>
+			<td align="left"><input type='radio' id='DESTCOR_S' onclick='javascript: this.checked = true; document.getElementById("DESTCOR_N").checked = false;' />Sí<input type='radio' id='DESTCOR_N' onclick='javascript: this.checked = true; document.getElementById("DESTCOR_S").checked = false;' />No</td>
+			<td align="right">Apoyo: psicológico, emocional o afectivo</td>
+			<td align="left"><input type='radio' id='APOYO_S' onclick='javascript: this.checked = true; document.getElementById("APOYO_N").checked = false;' />Sí<input type='radio' id='APOYO_N' onclick='javascript: this.checked = true; document.getElementById("APOYO_S").checked = false;' />No</td>
+		</tr>
+		<tr>
+			<td align="right">¿Por qué escogió esta ciudad como lugar de residencia?</td>
+			<td align="left" colspan="3"><input type='text' id='RAZONELEC' size='70' maxlength='255' class='inputTexto'  /></td>
+		</tr>
+		<tr>
+			<td align="right">En la actualidad, ¿recibe alguna ayuda por parte del Ayto., Xunta o Estado?</td>
+			<td align="left"><input type='radio' id='AYUDAPUBLICA_S' onclick='javascript: this.checked = true; document.getElementById("AYUDAPUBLICA_N").checked = false;' />Sí<input type='radio' id='AYUDAPUBLICA_N' onclick='javascript: this.checked = true; document.getElementById("AYUDAPUBLICA_S").checked = false;' />No</td>
+			<td align="right">Tipo de ayuda recibida</td><td align="left"><input type='text' id='TIPOAYUDA' size='20' maxlength='255' class='inputTexto'  /></textarea></td>
+		</tr>
+	</table>
+</div>
+<div id="panelPestana6" class="clPanelPestana" style="display: none;">
+	<table border='0' cellpadding='2' cellspacing='2' align='center' class='clTablaEdicion'>
+		<tr>
+			<td width="33%"></td>
+			<td width="30%"></td>
+			<td width="17%"></td>
+			<td width="20%"></td>
+		</tr>
+		<tr>
+			<td align="right">Nivel estudios</td>
+			<td align="left" colspan="3"><select id='CTIPOESTUDIOS' class='inputTexto' ><option value=''></option></select></td>
+		</tr>
+		<tr>
+			<td align="right">Otros. Especificar</td>
+			<td align="left" colspan="3"><input type='text' id='OTROSESTUDIOS' size='75' maxlength='100' class='inputTexto'  /></td>
+		</tr>
+		<tr>
+			<td align="right">Idiomas</td>
+			<td align="left"><select id='CODIDIOMA1' class='inputTexto' ><option value=''></option></select></td>
+			<td align="right">Nivel</td>
+			<td align="left"><select id='CTIPONIVIDI1' class='inputTexto' ><option value=''></option></select></td>
+		</tr>
+		<tr>
+			<td></td>
+			<td align="left"><select id='CODIDIOMA2' class='inputTexto' ><option value=''></option></select></td>
+			<td align="right">Nivel</td>
+			<td align="left"><select id='CTIPONIVIDI2' class='inputTexto' ><option value=''></option></select></td>
+		</tr>
+		<tr>
+			<td align="right">Última ocupación en su país de origen</td>
+			<td align="left" colspan="3"><input type='text' id='ULTIMAOCUP' size='75' maxlength='255' class='inputTexto'  /></td>
+		</tr>
+		<tr>
+			<td align="right">Otras. Especificar</td>
+			<td align="left" colspan="3"><input type='text' id='OTRASOCUP' size='75' maxlength='255' class='inputTexto'  /></td>
+		</tr>
+		<tr>
+			<td align="right">¿Trabajó alguna vez en España?</td>
+			<td align="left"><input type='radio' id='TRABESP_S' onclick='javascript: this.checked = true; document.getElementById("TRABESP_N").checked = false;' />Sí<input type='radio' id='TRABESP_N' onclick='javascript: this.checked = true; document.getElementById("TRABESP_S").checked = false;' />No</td>
+			<td align="right">¿Estaba asegurado?</td><td align="left"><input type='radio' id='ASEGURADO_S' onclick='javascript: this.checked = true; document.getElementById("ASEGURADO_N").checked = false;' />Sí<input type='radio' id='ASEGURADO_N' onclick='javascript: this.checked = true; document.getElementById("ASEGURADO_S").checked = false;' />No</td>
+		</tr>
+		<tr>
+			<td align="right"><b>¿Demanda trabajo?</b></td>
+			<td align="left" colspan="3"><input type='radio' id='DEMANDATRAB_S' onclick='javascript: this.checked = true; document.getElementById("DEMANDATRAB_N").checked = false;' />Sí<input type='radio' id='DEMANDATRAB_N' onclick='javascript: this.checked = true; document.getElementById("DEMANDATRAB_S").checked = false;' />No</td>
+		</tr>
+		<tr>
+			<td align="right">Sectores de actividad en España</td>
+			<td align="left" colspan="3"><input type='text' id='SECTORESP' size='75' maxlength='255' class='inputTexto'  /></td>
+		</tr>
+		<tr>
+			<td align="right">Otros. Especificar</td>
+			<td align="left" colspan="3"><input type='text' id='OTROSSECT' size='75' maxlength='255' class='inputTexto'  /></td>
+		</tr>
+		<tr>
+			<td align="right">Situación Laboral actual</td>
+			<td align="left" colspan="3"><select id='CTIPOSITLAB' class='inputTexto' ><option value=''></option></select></td>
+		</tr>
+		<tr>
+			<td align="right">Otras. Especificar</td>
+			<td align="left" colspan="3"><input type='text' id='OTRASSITLAB' size='75' maxlength='100' class='inputTexto'  /></td>
+		</tr>
+	</table>
+</div>
+<div id="panelPestana7" class="clPanelPestana" style="display: none;">
+	<table border='0' cellpadding='2' cellspacing='2' align='center' class='clTablaEdicion'>
+		<tr>
+			<td width="27%"></td>
+			<td width="25%"></td>
+			<td width="28%"></td>
+			<td width="20%"></td>
+		</tr>
+		<tr>
+			<td align="right">¿Tarjeta sanitaria?</td>
+			<td align="left"><select id='CTIPOTARJSS' class='inputTexto' ><option value=''></option></select></td>
+			<td align="right">Nº tarjeta sanitaria</td>
+			<td align="left"><input type='text' id='NUMTARJSS' size='20' maxlength='50' class='inputTexto'  /></td>
+		</tr>
+		<tr>
+			<td align="right">En caso de urgencia, ¿sabe dónde acudir?</td>
+			<td align="left"><input type='radio' id='ACUDIRURG_S' onclick='javascript: this.checked = true; document.getElementById("ACUDIRURG_N").checked = false;' />Sí<input type='radio' id='ACUDIRURG_N' onclick='javascript: this.checked = true; document.getElementById("ACUDIRURG_S").checked = false;' />No</td>
+			<td align="right">¿Se apuntó a la prueba T.B.?</td>
+			<td align="left"><input type='radio' id='PRUEBATB_S' onclick='javascript: this.checked = true; document.getElementById("PRUEBATB_N").checked = false;' />Sí<input type='radio' id='PRUEBATB_N' onclick='javascript: this.checked = true; document.getElementById("PRUEBATB_S").checked = false;' />No</td>
+		</tr>
+		<tr>
+			<td align="right">¿Se hizo la prueba Mantoux?</td>
+			<td align="left"><input type='radio' id='PRUEBAMANTOUX_S' onclick='javascript: this.checked = true; document.getElementById("PRUEBAMANTOUX_N").checked = false;' />Sí<input type='radio' id='PRUEBAMANTOUX_N' onclick='javascript: this.checked = true; document.getElementById("PRUEBAMANTOUX_S").checked = false;' />No</td>
+			<td align="right">Fecha en la que la hizo</td>
+			<td align="left"><input type='text' id='FECHAMANTOUX' maxlength='10' size='12' class='inputTexto' style='text-align: center'  /><img id="cal_FECHAMANTOUX" src='img/calendario20.gif' style='cursor: pointer;' onclick="return showCalendar('FECHAMANTOUX', '%d/%m/%Y');"/></td>
+		</tr>
+		<tr>
+			<td align="right">¿Por qué no se hizo la prueba de Mantoux?</td>
+			<td align="left" colspan="3"><input type='text' id='PQNOMANTOUX' size='78' maxlength='255' class='inputTexto'  /></td>
+		</tr>
+	</table>
+</div>
+<div id="panelPestana8" class="clPanelPestana" style="display: none;">
+	<table border='0' cellpadding='2' cellspacing='2' align='center' class='clTablaEdicion'>
+		<tr>
+			<td width="27%"></td>
+			<td width="23%"></td>
+			<td width="26%"></td>
+			<td width="24%"></td>
+		</tr>
+		<tr>
+			<td align="right">¿Está empadronado?</td>
+			<td align="left"><input type='radio' id='EMPADRONADO_S' onclick='javascript: this.checked = true; document.getElementById("EMPADRONADO_N").checked = false;' />Sí<input type='radio' id='EMPADRONADO_N' onclick='javascript: this.checked = true; document.getElementById("EMPADRONADO_S").checked = false;' />No</td>
+			<td align="right">Lugar de empadronamiento</td>
+			<td align="left"><input type='text' id='LUGAREMP' size='30' maxlength='255' class='inputTexto'  /></td>
+		</tr>
+		<tr>
+			<td align="right">Fecha de empadronamiento</td>
+			<td align="left"><input type='text' id='FECHAEMP' size='12' maxlength='10' class='inputTexto' style='text-align: center'  /><img id="cal_FECHAEMP" src='img/calendario20.gif' style='cursor: pointer;' onclick="return showCalendar('FECHAEMP', '%d/%m/%Y');"/></td>
+			<td align="right">Arraigo familiar en España</td>
+			<td align="left"><input type='radio' id='ARRAIGOESP_S' onclick='javascript: this.checked = true; document.getElementById("ARRAIGOESP_N").checked = false;' />Sí<input type='radio' id='ARRAIGOESP_N' onclick='javascript: this.checked = true; document.getElementById("ARRAIGOESP_S").checked = false;' />No</td>
+		</tr>
+		<tr>
+			<td align="right">Fecha de entrada espacio Schengen</td>
+			<td align="left"><input type='text' id='FECHASCHG' size='12' maxlength='10' class='inputTexto' style='text-align: center'  /><img id="cal_FECHASCHG" src='img/calendario20.gif' style='cursor: pointer;' onclick="return showCalendar('FECHASCHG', '%d/%m/%Y');"/></td>
+			<td align="right">Modo de entrada espacio Schengen</td>
+			<td align="left"><input type='text' id='MODOENTSCHG' size='30' maxlength='255' class='inputTexto'  /></td>
+		</tr>
+		<tr>
+			<td align="right">Otros. Especificar</td>
+			<td align="left" colspan="3"><input type='text' id='OTROSSCHG' size='82' maxlength='100' class='inputTexto'  /></td>
+		</tr>
+	</table>
+</div>
+<div id="panelPestana9" class="clPanelPestana" style="display: none;">
+	<table border='0' cellpadding='2' cellspacing='2' align='center' class='clTablaEdicion'>
+		<tr>
+			<td width="27%"></td>
+			<td width="23%"></td>
+			<td width="26%"></td>
+			<td width="24%"></td>
+		</tr>
+		<tr>
+			<td align="left" colspan="4">Cursos demandados</td>
+		</tr>
+		<tr>
+			<td align="left" colspan="4">
+				<textarea id='CURSOSDEM' class='inputTexto' rows='3' cols='103'  onkeypress="javascript: return edicion.controlMaxLength(this, event, 255);" ></textarea>
+			</td>
+		</tr>
+		<tr>
+			<td align="left" colspan="4">Otros Cursos</td>
+		</tr>
+		<tr>
+			<td align="left" colspan="4"><textarea id='OTROSCURSOS' class='inputTexto' rows='2' cols='103'  onkeypress="javascript: return edicion.controlMaxLength(this, event, 255);" ></textarea></td>
+		</tr>
+		<tr>
+			<td align="left" colspan="4">Demanda solicitada</td>
+		</tr>
+		<tr>
+			<td align="left" colspan="4"><textarea id='DEMANDASOL' class='inputTexto' rows='3' cols='103'  onkeypress="javascript: return edicion.controlMaxLength(this, event, 1000);" ></textarea></td>
+		</tr>
+		<tr>
+			<td align="right">Otra. Especificar</td>
+			<td align="left" colspan="3"><input type='text' id='OTRASDEM' size='74' maxlength='100' class='inputTexto'  /></td>
+		</tr>
+		<tr>
+			<td align="left" colspan="4">Cursos superados en Ecos do Sur</td>
+		</tr>
+		<tr>
+			<td align="left" colspan="4"><textarea id='CURSOSSUP' class='inputTexto' rows='3' cols='103'  onkeypress="javascript: return edicion.controlMaxLength(this, event, 255);" ></textarea></td>
+		</tr>
+		<tr>
+			<td align="left" colspan="4">Necesidades de derivar a otras instituciones o asociaciones</td>
+		</tr>
+		<tr>
+			<td align="left" colspan="4"><textarea id='DERIVAROTRAS' class='inputTexto' rows='3' cols='103'  onkeypress="javascript: return edicion.controlMaxLength(this, event, 155);" ></textarea></td>
+		</tr>
+		<tr>
+			<td align="left" colspan="4">Motivos de la derivación</td>
+		</tr>
+		<tr>
+			<td align="left" colspan="4"><textarea id='MOTIVOSDERIV' class='inputTexto' rows='3' cols='103'  onkeypress="javascript: return edicion.controlMaxLength(this, event, 1000);" ></textarea></td>
+		</tr>
+		<tr>
+			<td align="left" colspan="4">Avisos a usuarios</td>
+		</tr>
+		<tr>
+			<td align="left" colspan="4"><textarea id='AVISOS' class='inputTexto' rows='3' cols='103'  onkeypress="javascript: return edicion.controlMaxLength(this, event, 1000);" ></textarea></td>
+		</tr>
+	</table>
+</div>
+</td></tr></table>

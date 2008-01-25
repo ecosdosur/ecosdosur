@@ -1,0 +1,55 @@
+<table border='0' cellpadding='2' cellspacing='2' align='center' class='clTablaEdicion'>
+	<tr>
+		<td width="15%"></td>
+		<td width="30%"></td>
+		<td width="18%"></td>
+		<td width="37%"></td>
+	</tr>
+	<tr>
+		<td align="right">Organización</td>
+		<td align="left" colspan="3">
+			<input type='text' id='CODTERC' size='10' class='inputTextoObligatorio' readonly='readonly' /><input type='text' id='DESCTERCERO' size='60' class='inputTextoObligatorio' readonly='readonly' /><input type='button' class='boton' style='width: 30px;' id='btn_CODTERC' value='...' onmouseover="javascript: if ( !this.disabled ) { this.className='botonOver'; };" onmouseout="javascript: this.className='boton';" onclick="javascript: edicion.abrirLista('TERCEROS', 'CODTERC|DESCTERCERO');" /><input type='button' class='boton' style='width: 30px;' id='btnDel_CODTERC' value=' X ' onmouseover="javascript: if ( !this.disabled ) { this.className='botonOver'; };" onmouseout="javascript: this.className='boton';" onclick="javascript: edicion.borrarRelacionado('CODTERC', 'DESCTERCERO');" />
+		</td>
+	</tr>
+	<tr>
+		<td colspan="4" height="10px"></td>
+	</tr>
+	<tr>
+		<td align="right">Código</td>
+		<td align="left"><input type='text' id='CODDEPT' size='10' class='inputTextoObligatorio'  /></td>
+		<td align="right">Descripción</td>
+		<td align="left"><input type='text' id='DESCDEPT' size='35' maxlength='255' class='inputTextoObligatorio'  /></td>
+	</tr>
+	<tr>
+		<td align="right">Nombre</td>
+		<td align="left"><input type='text' id='NOMBRE' size='25' maxlength='255' class='inputTexto'  /></td>
+		<td align="right">Apellidos</td>
+		<td align="left"><input type='text' id='APELLIDOS' size='35' maxlength='255' class='inputTexto'  /></td>
+	</tr>
+	<tr>
+		<td align="right">N.I.F.</td>
+		<td align="left"><input type='text' id='NIF' size='25' maxlength='20' class='inputTexto'  /></td>
+		<td align="right">Cargo</td>
+		<td align="left"><input type='text' id='CARGO' size='35' maxlength='255' class='inputTexto'  /></td>
+	</tr>
+	<tr>
+		<td align="right">Tlf. Móvil</td>
+		<td align="left"><input type='text' id='TLFMOVIL' size='25' maxlength='20' class='inputTexto'  /></td>
+		<td align="right">Teléfono(s) fijo(s)</td>
+		<td align="left"><input type='text' id='TLFFIJOS' size='35' maxlength='50' class='inputTexto'  /></td>
+	</tr>
+	<tr>
+		<td align="right">Fax</td>
+		<td align="left"><input type='text' id='FAX' size='25' maxlength='20' class='inputTexto'  /></td>
+		<td align="right">Correo electrónico</td>
+		<td align="left"><input type='text' id='EMAIL' size='35' maxlength='50' class='inputTexto'  /></td>
+	</tr>
+	<tr>
+		<td align="right">Dirección</td>
+		<td align="left" colspan="3"><input type='text' id='DIRECCION' size='86' maxlength='255' class='inputTexto'  /></td>
+	</tr>
+	<tr>
+		<td align="right">Notas</td>
+		<td align="left" colspan="3"><textarea id='NOTAS' class='inputTexto' rows='3' cols='86'  onkeypress="javascript: return edicion.controlMaxLength(this, event, 1000);" ></textarea></td>
+	</tr>
+</table>

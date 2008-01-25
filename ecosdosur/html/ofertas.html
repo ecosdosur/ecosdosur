@@ -1,0 +1,112 @@
+<table border='0' cellpadding='2' cellspacing='2' align='center' class='clTablaEdicion'>
+	<tr>
+		<td width="25%"></td>
+		<td width="30%"></td>
+		<td width="15%"></td>
+		<td width="30%"></td>
+	</tr>
+	<tr>
+		<td colspan="4" align="center"><b><font size="5">OFERTAS DE TRABAJO RECIBIDAS</font></b></td>
+	</tr>
+	<tr>
+		<td height="10px" colspan="4"></td>
+	</tr>
+	<tr>
+		<td align="right">Número oferta</td>
+		<td align="left"><input type='text' id='CODOFERTA' size='30' maxlength='50' class='inputTextoObligatorio'  /></td>
+		<td align="right">Fecha</td>
+		<td align="left"><input type='text' id='FECHA' size='12' maxlength='10' class='inputTexto' style='text-align: center'  /><img id="cal_FECHA" src='img/calendario20.gif' style='cursor: pointer;' onclick="return showCalendar('FECHA', '%d/%m/%Y');"/></td>
+	</tr>
+	<tr>
+		<td align="right">Empleador</td>
+		<td align="left" colspan="3">
+			<input type='text' id='CODEMP' size='10' class='inputTextoObligatorio' readonly='readonly' /><input type='text' id='DESCEMPLEADOR' size='55' class='inputTextoObligatorio' readonly='readonly' /><input type='button' class='boton' style='width: 30px;' id='btn_CODEMP' value='...' onmouseover="javascript: if ( !this.disabled ) { this.className='botonOver'; };" onmouseout="javascript: this.className='boton';" onclick="javascript: edicion.abrirLista('EMPLEADOR', 'CODEMP|DESCEMPLEADOR');" /><input type='button' class='boton' style='width: 30px;' id='btnDel_CODEMP' value=' X ' onmouseover="javascript: if ( !this.disabled ) { this.className='botonOver'; };" onmouseout="javascript: this.className='boton';" onclick="javascript: edicion.borrarRelacionado('CODEMP', 'DESCEMPLEADOR');" />
+		</td>
+	</tr>
+	<tr>
+		<td align="right">Seguridad Social</td>
+		<td align="left" colspan="3"><select id='CTIPOSS' class='inputTexto' ><option value=''></option></select></td>
+	</tr>
+	<tr>
+		<td align="right">Definir Clase de trabajo</td>
+		<td align="left" colspan="3"><textarea id='CLASETRABAJO' class='inputTexto' rows='3' cols='76'  onkeypress="javascript: return edicion.controlMaxLength(this, event, 1000);" ></textarea></td>
+	</tr>
+	<tr>
+		<td align="right">Días de la semana de trabajo</td>
+		<td align="left" colspan="3">
+			<input type='checkbox' id='DIATRABAJO1' />&nbsp;Lunes
+			<input type='checkbox' id='DIATRABAJO2' />&nbsp;Martes
+			<input type='checkbox' id='DIATRABAJO3' />&nbsp;Mi&eacute;rcoles
+			<input type='checkbox' id='DIATRABAJO4' />&nbsp;Jueves
+			<input type='checkbox' id='DIATRABAJO5' />&nbsp;Viernes
+			<input type='checkbox' id='DIATRABAJO6' />&nbsp;S&aacute;bado
+			<input type='checkbox' id='DIATRABAJO7' />&nbsp;Domingo
+		</td>
+	</tr>
+	<tr>
+		<td align="right"><i>Días libres</i></td>
+		<td align="left" colspan="3">
+			<input type='checkbox' id='DIALIBRE1' />&nbsp;Lunes
+			<input type='checkbox' id='DIALIBRE2' />&nbsp;Martes
+			<input type='checkbox' id='DIALIBRE3' />&nbsp;Mi&eacute;rcoles
+			<input type='checkbox' id='DIALIBRE4' />&nbsp;Jueves
+			<input type='checkbox' id='DIALIBRE5' />&nbsp;Viernes
+			<input type='checkbox' id='DIALIBRE6' />&nbsp;S&aacute;bado
+			<input type='checkbox' id='DIALIBRE7' />&nbsp;Domingo
+		</td>
+	</tr>
+	<tr>
+		<td align="right">Horario trabajo</td>
+		<td align="left"><input type='text' id='HORARIO' size='30' maxlength='255' class='inputTexto'  /></td>
+		<td align="right">Salario</td>
+		<td align="left"><input type='text' id='SALARIO' size='26' maxlength='255' class='inputTexto'  /></td>
+	</tr>
+	<tr>
+		<td align="right">Tiempo estimado de duración del empleo</td>
+		<td align="left" colspan="3"><input type='text' id='DURACION' size='76' maxlength='255' class='inputTexto'  /></td>
+	</tr>
+	<tr>
+		<td align="right">Condiciones específicas del trabajo</td>
+		<td align="left" colspan="3"><textarea id='CONDICIONES' class='inputTexto' rows='3' cols='76'  onkeypress="javascript: return edicion.controlMaxLength(this, event, 1000);" ></textarea></td>
+	</tr>
+	<tr>
+	</tr>
+		<td colspan="4">
+			<table border='0' cellpadding='2' cellspacing='2' align="center" class='clTablaEdicion' style="border: 1px solid black;" width="95%">
+				<tr>
+					<td colspan="2"><b>UNA VEZ SELECCIONADO EL TRABAJADOR/ES:</b></td>
+				</tr>
+				<tr>
+					<td align="right"><input type='checkbox' id='CONF1' /></td>
+					<td align="left">Confirmación del empleador de usuario de Ecos CONTRATADO</td>
+				</tr>
+				<tr>
+					<td align="right"><input type='checkbox' id='CONF2' /></td>
+					<td align="left">Confirmación del empleador de usuario de Ecos NO CONTRATADO</td>
+				</tr>
+				<tr>
+					<td align="right"><input type='checkbox' id='CONF3' /></td>
+					<td align="left">Confirmación del usuario de Ecos CONTRATADO</td>
+				</tr>
+				<tr>
+					<td align="right"><input type='checkbox' id='CONF4' /></td>
+					<td align="left">Confirmación del usuario de Ecos NO CONTRATADO</td>
+				</tr>
+				<tr>
+					<td align="right"><input type='checkbox' id='NOCONF' /></td>
+					<td align="left">No confirmación</td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td align="left" colspan="4">&nbsp;&nbsp;&nbsp;&nbsp;Observaciones</td>
+	</tr>
+	<tr>
+		<td align="left" colspan="4">&nbsp;&nbsp;&nbsp;&nbsp;<textarea id='OBSERVACIONES' class='inputTexto' rows='5' cols='103'  onkeypress="javascript: return edicion.controlMaxLength(this, event, 1000);" ></textarea></td>
+	</tr>
+</table>
+<table border='0' cellpadding='2' cellspacing='2' align='center' class='clTablaEdicion' style="display: none;">
+
+
+</table>

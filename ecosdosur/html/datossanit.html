@@ -1,0 +1,73 @@
+<table border='0' cellpadding='2' cellspacing='2' align='center' class='clTablaEdicion'>
+	<tr>
+		<td width="20%"></td>
+		<td width="30%"></td>
+		<td width="20%"></td>
+		<td width="30%"></td>
+	</tr>
+	<tr>
+		<td colspan="4">
+			<div style="position: relative; left: 75px; width: 200px; font-weight: bold; font-size: 15px;">DATOS PERSONALES</div>
+		</td>
+	</tr>
+	<tr>
+		<td align="right">Usuario</td>
+		<td align="left" colspan="3"><input type='text' id='HISTORIAL' size='18' class='inputTextoObligatorio' readonly='readonly' /><input type='text' id='DESCHISTORIAL' size='50' class='inputTextoObligatorio' readonly='readonly' /><input type='button' class='boton' id='btn_HISTORIAL' value='...' onmouseover="javascript: if ( !this.disabled ) { this.className='botonOver'; };" onmouseout="javascript: this.className='boton';" onclick="javascript: edicion.abrirLista('USUARIOSEC', 'HISTORIAL|DESCHISTORIAL');" /><input type='button' class='boton' id='btnDel_HISTORIAL' value=' X ' onmouseover="javascript: if ( !this.disabled ) { this.className='botonOver'; };" onmouseout="javascript: this.className='boton';" onclick="javascript: edicion.borrarRelacionado('HISTORIAL', 'DESCHISTORIAL');" /></td>
+	</tr>
+	<tr>
+		<td align="right">Residencia</td>
+		<td align="left"><input type='text' id='_RESIDENCIA' size='30' class='inputTexto' readonly /></td>
+		<td align="right">Sexo</td>
+		<td align="left"><input type='text' id='_SEXO' size='12' class='inputTexto' readonly /></td>
+	</tr>
+	<tr>
+		<td align="right">Nacionalidad</td>
+		<td align="left"><input type='text' id='_NACIONALIDAD' size='30' class='inputTexto' readonly /></td>
+		<td align="right">Área geográfica</td>
+		<td align="left"><input type='text' id='_AREAGEO' size='28' class='inputTexto' readonly /></td>
+	</tr>
+	<tr>
+		<td colspan="4" height="10px"></td>
+	</tr>
+	<tr>
+		<td colspan="4">
+			<div style="position: relative; left: 75px;  width: 200px; font-weight: bold; font-size: 15px;">DATOS SANITARIOS</div>
+		</td>
+	</tr>
+	<tr>
+		<td align="right">Edad</td>
+		<td align="left"><input type='text' id='EDAD' size='20' class='inputTexto'  /></td>
+		<td align="right">Grupo de edad</td>
+		<td align="left"><select id='CTIPOGREDAD' class='inputTexto' ><option value=''></option></select></td>
+	</tr>
+	<tr>
+		<td align="right">Medida de Mantoux</td>
+		<td align="left"><input type='text' id='MEDMANTOUX' size='20' class='inputTexto'  /></td>
+		<td align="right">Mantoux Recodificado</td>
+		<td align="left"><select id='CTIPOMANTOUX' class='inputTexto' ><option value=''></option></select></td>
+	</tr>
+	<tr>
+		<td align="right">Tratamiento</td>
+		<td align="left" colspan="3"><select id='CTIPOTRAT' class='inputTexto' ><option value=''></option></select></td>
+	</tr>
+	<tr>
+		<td align="right">Vacuna BCG</td>
+		<td align="left" colspan="3"><select id='CODVACBCG' class='inputTexto' ><option value=''></option></select></td>
+	</tr>
+	<tr>
+		<td align="right">Factores de riesgo</td>
+		<td align="left" colspan="3"><select id='CTIPOFACT' class='inputTexto' ><option value=''></option></select></td>
+	</tr>
+	<tr>
+		<td align="right">Mes de atención</td>
+		<td align="left" colspan="3"><select id='CODMES' class='inputTexto' ><option value=''></option></select></td>
+	</tr>
+	<tr>
+		<td align="right"><input type='checkbox' id='INFOVIH'  /></td>
+		<td align="left" colspan="3">Informado de VIH/SIDA</td>
+	</tr>
+	<tr>
+		<td align="right"><input type='checkbox' id='DERIVVIH'  /></td>
+		<td align="left" colspan="3">Derivado a Unidad VIH/SIDA</td>
+	</tr>
+</table>

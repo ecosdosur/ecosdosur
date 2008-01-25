@@ -1,0 +1,370 @@
+/* Hoja de estilos de Ecos do Sur */
+
+/* Generalidades del cuerpo */
+body {
+	color: black;
+	font-family: Lucida Sans, Verdana, Arial;
+	font-size: 12px;
+	background: rgb(243, 240, 235);
+}
+
+/* Generalidades de enlaces*/
+a {
+	color: blue;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: navy;
+	text-decoration: underline;
+}
+
+/***** VISTA *****/
+/* Cabecera de la vista */
+#extCabecera {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 35px;
+	/* border: 1px solid red; */
+}
+
+#inCabecera {
+	padding-top: 3px;
+	padding-bottom: 3px;
+	padding-left: 20px;
+}
+
+#divBotonArriba {
+	position: absolute;
+	top: 3px;
+	right: 10px;
+	width: 150px;
+	text-align: right;
+}
+
+.clCabecera {
+	/* background: rgb(227, 224, 219); */
+	background: rgb(209, 203, 197);
+	font-family: Georgia, Arial;
+	font-weight: bold;
+	font-variant: small-caps;
+	letter-spacing: 2px;
+	font-size: 22px;
+}
+
+/* Panel: filtro + resultado + navegador + acción */
+#panel {
+	position: absolute;
+	top: 35px;
+	left: 0px;
+	width: 100%;
+	/* border: 1px solid red; */
+}
+
+/* Descripción del padre */
+#extDescPadre {
+	/* border: 1px solid navy; */
+}
+
+#inDescPadre {
+	padding-left: 35px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+/* Filtro */
+#extFiltro {
+	/* border: 1px solid navy; */
+}
+
+#inFiltro {
+	padding-left: 35px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+/* Resultado */
+#extResultado {
+	/* border: 1px solid navy; */
+	/* display: none; */
+}
+
+#inResultado {
+/*
+	padding-left: 35px;
+	padding-right: 35px;
+*/
+	padding-left: 15px; 
+	padding-right: 15px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+/* Navegador */
+#extNavegador {
+	/* border: 1px solid navy; */
+	/* display: none; */
+}
+
+#inNavegador {
+	padding-left: 40px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.clNavegador {
+	font-weight: bold;
+	font-size: 14px;
+}
+
+/* Mensaje de acción */
+#extMsgAccion {
+	/* border: 1px solid navy; */
+	/* display: none; */
+}
+
+#inMsgAccion {
+	padding-left: 15px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.clMsgAccion {
+	background: rgb(227, 224, 219);
+	font-weight: bold;
+	text-align: center;
+	text-transform: capitalize;
+	/* text-decoration: blink; */
+}
+
+/* Tabla de resultado */
+.clTablaResultado {
+	/* background: rgb(227, 224, 219); */
+	width: 93%;
+	font-size: 11px;
+	/* border: 1px solid red; */
+}
+
+.clCabeceraResultado {
+	background: rgb(188, 179, 169);
+	font-weight: bold;
+}
+
+.clCabeceraOver {
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.clFila {
+	background: rgb(209, 203, 197);
+}
+
+.clFilaOver {
+	color: rgb(92, 86, 78);
+	/* font-weight: bold; */
+	/* font-size: 13px; */
+	background: rgb(201, 192, 184);
+}
+
+.clTablaOut {
+	cursor: pointer;
+	background: rgb(243, 240, 235);
+}
+
+/* Menú de cada registro */
+#menu {
+	width: 150px;
+	border: 1px solid black;
+	/* background: rgb(188, 179, 169); */
+	background: rgb(227, 224, 219);
+}
+
+.clMenu {
+	font-size: 11px;
+	color: rgb(115, 102, 89);
+	/* cursor: pointer; */
+}
+
+.clMenuCab {
+	font-weight: bold;
+	cursor: pointer;
+	color: white;
+	background: black;
+	padding: 3px;
+}
+
+.clMenuEnabled {
+	cursor: pointer;
+	padding: 5px;
+}
+
+.clMenuEnabledActive {	
+	cursor: pointer;
+	padding: 5px;
+	font-weight: bold;
+	background: rgb(209, 203, 197);
+}
+
+.clMenuDisabled {
+	color: #808080;
+	padding: 5px;
+}
+
+/***** EDICIÓN *****/
+
+.clTablaEdicion {
+	font-size: 12px;
+}
+
+/* Lista de campos */
+#campos {
+	/* padding: 15px; */
+	/* border: 1px solid red; */
+}
+
+/* Botones */
+#botones {
+	/* border: 1px solid red; */
+}
+
+/***** MENÚ DEL MARCO *****/
+.clBarraMenus {
+	font-family: Georgia, Arial;
+	text-transform: capitalize;
+	letter-spacing: 2px;
+	background: rgb(188, 179, 169);
+	font-weight: bold;
+	cursor: pointer;
+	border: none;
+}
+
+.clBarraMenusOver {
+	background: black;
+	color: white;
+}
+
+#divMenu {
+	width: 200px;
+	border: 1px solid rgb(188, 179, 169);
+	/* background: rgb(188, 179, 169); */
+	background: rgb(227, 224, 219);
+}
+
+/***** MENÚ DEL MARCO *****/
+#marcoLogin {
+	width: 100%;
+}
+
+#cabeceraLogin {
+	padding: 5px;
+}
+
+.clCabeceraLogin {
+	background: black;
+	color: white;
+	font-weight: bold;
+}
+
+#cuerpoLogin {
+	padding: 5px;
+}
+
+.clCuerpoLogin {
+	background: rgb(209, 203, 197);
+}
+
+.clTablaCuerpoLogin {
+	width: 100%;
+	font-size: 12px;
+}
+
+/****** PESTAÑAS ******/
+.clPestanaActiva {
+	color: white;
+	font-weight: bold;
+	font-size: 12px;
+	text-align: center;
+	background: rgb(188, 179, 169);
+	padding: 5px;
+	border-top: 1px solid rgb(188, 179, 169);
+	border-left: 1px solid rgb(188, 179, 169);
+	border-right: 1px solid rgb(188, 179, 169);
+	border-bottom: none;
+	cursor: pointer;
+}
+
+.clPestanaInactiva {
+	color: black;
+	font-weight: bold;
+	font-size: 12px;
+	text-align: center;
+	background: rgb(227, 224, 219);
+	padding: 5px;
+	border-top: 1px solid rgb(188, 179, 169);
+	border-left: 1px solid rgb(188, 179, 169);
+	border-right: 1px solid rgb(188, 179, 169);
+	border-bottom: none;
+	cursor: pointer;
+}
+
+.clPanelPestana {
+	background: rgb(255, 255, 251);
+	border: 1px solid rgb(188, 179, 169);
+	padding-bottom: 5px;
+}
+
+/******* INFORMES **************/
+#extOpcionesInforme {
+	width: 820px;
+	height: 530px;
+	overflow: auto;
+}
+
+/****** ESTILOS COMUNES ******/
+
+/* Botones */
+.boton {
+	font-family: Lucida Sans, Verdana, Arial;
+	font-size: 13px;
+	border: 1px solid rgb(188, 179, 169);
+	background: rgb(227, 224, 219);
+	font-weight: bold;
+	/* width: 50px; */
+}
+
+.botonOver {
+	font-family: Lucida Sans, Verdana, Arial;
+	font-size: 13px;
+	cursor: pointer;
+	border: 1px solid rgb(188, 179, 169);
+	background: rgb(188, 179, 169);
+	font-weight: bold;
+	/* width: 50px; */
+}
+
+/* Texto de los inputs */
+.inputTexto {
+	font-family: Lucida Sans, Verdana, Arial;
+	font-size: 14px;
+}
+
+.inputTextoObligatorio {
+	font-family: Lucida Sans, Verdana, Arial;
+	font-size: 14px;
+	background: rgb(205, 198, 190);
+}
+
+/* Texto de los combos */
+select {
+	font-family: Lucida Sans, Verdana, Arial;
+	font-size: 14px;
+}
+
+/* Mensaje encuadrado */
+.clMsgEncuadrado {
+	padding: 15px;
+	border: 1px solid black; 
+	background: white;
+}

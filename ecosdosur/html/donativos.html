@@ -1,0 +1,32 @@
+<table border='0' cellpadding='2' cellspacing='2' align='center' class='clTablaEdicion'>
+	<tr>
+		<td width="15%"></td>
+		<td width="57%"></td>
+		<td width="10%"></td>
+		<td width="18%"></td>
+	</tr>
+	<tr>
+		<td align="right">Socio</td>
+		<td align="left">
+			<input type='text' id='NSOCIO' size='7' class='inputTextoObligatorio' readonly='readonly' /><input type='text' id='DESCSOCIO' size='40' class='inputTextoObligatorio' readonly='readonly' /><input type='button' class='boton' style='width: 30px;' id='btn_NSOCIO' value='...' onmouseover="javascript: if ( !this.disabled ) { this.className='botonOver'; };" onmouseout="javascript: this.className='boton';" onclick="javascript: edicion.abrirLista('SOCIOS', 'NSOCIO|DESCSOCIO');" /><input type='button' class='boton' style='width: 30px;' id='btnDel_NSOCIO' value=' X ' onmouseover="javascript: if ( !this.disabled ) { this.className='botonOver'; };" onmouseout="javascript: this.className='boton';" onclick="javascript: edicion.borrarRelacionado('NSOCIO', 'DESCSOCIO');" />
+		</td>
+		<td align="right">Año</td>
+		<td align="left"><input type='text' id='AÑO' size='10' class='inputTextoObligatorio'  /></td>
+	</tr>
+	<tr>
+		<td colspan="4" height="12px"></td>
+	</tr>
+	<tr>
+		<td align="right">Importe cuota</td>
+		<td align="left"><input type='text' id='IMPCUOTA' size='20' class='inputTexto'  />&nbsp;&euro;</td>
+		<td align="right">Periodicidad</td>
+		<td align="left"><input type='text' id='PERIODICIDAD' size='10' class='inputTexto'  /></td></tr>
+	<tr>
+		<td align="right">Donativos</td>
+		<td align="left" colspan="3"><textarea id='DONATIVOS' class='inputTexto' rows='2' cols='83'  onkeypress="javascript: return edicion.controlMaxLength(this, event, 255);" ></textarea></td>
+	</tr>
+	<tr>
+		<td align="right">Observaciones</td>
+		<td align="left" colspan="3"><textarea id='OBSERVACIONES' class='inputTexto' rows='3' cols='83'  onkeypress="javascript: return edicion.controlMaxLength(this, event, 255);" ></textarea></td>
+	</tr>
+</table>

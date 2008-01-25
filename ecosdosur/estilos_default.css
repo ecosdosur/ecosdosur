@@ -1,0 +1,358 @@
+/* Hoja de estilos de Ecos do Sur */
+
+/* Generalidades del cuerpo */
+body {
+	color: black;
+	font-family: Verdana, Arial;
+	font-size: 12px;
+	background: #F3F0EB;
+}
+
+/* Generalidades de enlaces*/
+a {
+	color: blue;
+	text-decoration: underline;
+}
+
+a:hover {
+	color: navy;
+	text-decoration: underline;
+}
+
+/***** VISTA *****/
+/* Cabecera de la vista */
+#extCabecera {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 35px;
+	/* border: 1px solid red; */
+}
+
+#inCabecera {
+	padding-top: 3px;
+	padding-bottom: 3px;
+	padding-left: 20px;
+}
+
+#divBotonArriba {
+	position: absolute;
+	top: 3px;
+	right: 10px;
+	width: 150px;
+	text-align: right;
+}
+
+.clCabecera {
+	background: #D3E0CB;
+	font-family: Impact, Arial;
+	letter-spacing: 1px;
+	font-size: 22px;
+}
+
+/* Panel: filtro + resultado + navegador + acción */
+#panel {
+	position: absolute;
+	top: 35px;
+	left: 0px;
+	width: 100%;
+	/* border: 1px solid red; */
+}
+
+/* Descripción del padre */
+#extDescPadre {
+	/* border: 1px solid navy; */
+}
+
+#inDescPadre {
+	padding-left: 35px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+/* Filtro */
+#extFiltro {
+	/* border: 1px solid navy; */
+}
+
+#inFiltro {
+	padding-left: 35px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+/* Resultado */
+#extResultado {
+	/* border: 1px solid navy; */
+	/* display: none; */
+}
+
+#inResultado {
+/*
+	padding-left: 35px;
+	padding-right: 35px;
+*/
+	padding-left: 15px;
+	padding-right: 15px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+/* Navegador */
+#extNavegador {
+	/* border: 1px solid navy; */
+	/* display: none; */
+}
+
+#inNavegador {
+	padding-left: 40px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.clNavegador {
+	font-weight: bold;
+	font-size: 14px;
+}
+
+/* Mensaje de acción */
+#extMsgAccion {
+	/* border: 1px solid navy; */
+	/* display: none; */
+}
+
+#inMsgAccion {
+	padding-left: 15px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.clMsgAccion {
+	background: #D3E0CB;
+	font-weight: bold;
+	text-align: center;
+	text-transform: capitalize;
+	/* text-decoration: blink; */
+}
+
+/* Tabla de resultado */
+.clTablaResultado {
+	/* background: #D3E0CB; */
+	width: 93%;
+	font-size: 11px;
+	/* border: 1px solid red; */
+}
+
+.clCabeceraResultado {
+	background: #B3C0AB;
+	font-weight: bold;
+}
+
+.clCabeceraOver {
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.clFila {
+	background: #D0DAC5;
+}
+
+.clFilaOver {
+	background: #C3D0BB;
+}
+
+.clTablaOut {
+	cursor: pointer;
+	background: #F3F0EB;
+}
+
+/* Menú de cada registro */
+#menu {
+	width: 150px;
+	border: 1px solid black;
+	background: #B3C0AB;
+}
+
+.clMenu {
+	font-size: 12px;
+	/* cursor: pointer; */
+}
+
+.clMenuCab {
+	font-weight: bold;
+	cursor: pointer;
+	color: white;
+	background: black;
+	padding: 3px;
+}
+
+.clMenuEnabled {
+	cursor: pointer;
+	padding: 5px;
+}
+
+.clMenuEnabledActive {	
+	cursor: pointer;
+	padding: 5px;
+	background: #D3E0CB;
+}
+
+.clMenuDisabled {
+	color: #505050;
+	padding: 5px;
+}
+
+/***** EDICIÓN *****/
+
+.clTablaEdicion {
+	font-size: 12px;
+}
+
+/* Lista de campos */
+#campos {
+	/* padding: 15px; */
+	/* border: 1px solid red; */
+}
+
+/* Botones */
+#botones {
+	/* border: 1px solid red; */
+}
+
+/***** MENÚ DEL MARCO *****/
+.clBarraMenus {
+	font-family: Arial;
+	text-transform: capitalize;
+	letter-spacing: 2px;
+	background: #B3C0AB;
+	font-weight: bold;
+	cursor: pointer;
+	border: none;
+}
+
+.clBarraMenusOver {
+	background: black;
+	color: white;
+}
+
+#divMenu {
+	width: 200px;
+	border: none;
+	background: #B3C0AB;
+}
+
+/***** MENÚ DEL MARCO *****/
+#marcoLogin {
+	width: 100%;
+}
+
+#cabeceraLogin {
+	padding: 5px;
+}
+
+.clCabeceraLogin {
+	background: black;
+	color: white;
+	font-weight: bold;
+}
+
+#cuerpoLogin {
+	padding: 5px;
+}
+
+.clCuerpoLogin {
+	background: #B3C0AB;
+}
+
+.clTablaCuerpoLogin {
+	width: 100%;
+	font-size: 12px;
+}
+
+/****** PESTAÑAS ******/
+.clPestanaActiva {
+	color: white;
+	font-weight: bold;
+	font-size: 12px;
+	text-align: center;
+	background: #B3C0AB;
+	padding: 5px;
+	border-top: 1px solid #B3C0AB;
+	border-left: 1px solid #B3C0AB;
+	border-right: 1px solid #B3C0AB;
+	border-bottom: none;
+	cursor: pointer;
+}
+
+.clPestanaInactiva {
+	color: black;
+	font-weight: bold;
+	font-size: 12px;
+	text-align: center;
+	background: #E3E0DB;
+	padding: 5px;
+	border-top: 1px solid #B3C0AB;
+	border-left: 1px solid #B3C0AB;
+	border-right: 1px solid #B3C0AB;
+	border-bottom: none;
+	cursor: pointer;
+}
+
+.clPanelPestana {
+	background: #FFFFFB;
+	border: 1px solid #B3C0AB;
+	padding-bottom: 5px;
+}
+
+/******* INFORMES **************/
+#extOpcionesInforme {
+	width: 820px;
+}
+
+/****** ESTILOS COMUNES ******/
+
+/* Botones */
+.boton {
+	font-family: Verdana, Arial;
+	font-size: 13px;
+	border: 1px solid #D3E0CB;
+	background: #E3E0DB;
+	font-weight: bold;
+	/* width: 50px; */
+}
+
+.botonOver {
+	font-family: Verdana, Arial;
+	font-size: 13px;
+	cursor: pointer;
+	border: 1px solid #D3E0CB;
+	background: #D3E0CB;
+	font-weight: bold;
+	/* width: 50px; */
+}
+
+/* Texto de los inputs */
+.inputTexto {
+	font-family: Verdana, Arial;
+	font-size: 14px;
+}
+
+.inputTextoObligatorio {
+	font-family: Verdana, Arial;
+	font-size: 14px;
+	background-color: #E0E0E0;
+}
+
+/* Texto de los combos */
+select {
+	font-family: Verdana, Arial;
+	font-size: 14px;
+}
+
+/* Mensaje encuadrado */
+.clMsgEncuadrado {
+	padding: 15px;
+	border: 1px solid black; 
+	background: white;
+}

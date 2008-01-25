@@ -1,0 +1,105 @@
+<table border='0' cellpadding='2' cellspacing='2' align='center' class='clTablaEdicion'>
+	<tr>
+		<td width="25%"></td>
+		<td width="25%"></td>
+		<td width="15%"></td>
+		<td width="35%"></td>
+	</tr>
+	<tr>
+		<td align="right">Código</td>
+		<td align="left" colspan="3"><input type='text' id='CODALUMNO' size='20' class='inputTexto' readonly='readonly' /></td>
+	</tr>
+	<tr>
+		<td colspan="4" style="height: 10px;"></td>
+	</tr>
+	<tr>
+		<td align="right">Nombre</td>
+		<td align="left"><input type='text' id='NOMBRE' size='20' maxlength='50' class='inputTextoObligatorio'  /></td>
+		<td align="right">Apellidos</td>
+		<td align="left"><input type='text' id='APELLIDOS' size='30' maxlength='255' class='inputTextoObligatorio'  /></td>
+	</tr>
+	<tr>
+		<td align="right">Tipo de documento</td>
+		<td align="left"><select id='CTIPOIDENT' class='inputTexto' ><option value=''></option></select></td>
+		<td align="right">Núm. docum.</td>
+		<td align="left"><input type='text' id='NUMDOCUM' size='20' maxlength='50' class='inputTexto'  /></td>
+	</tr>
+	<tr>
+		<td align="right">Nº afiliación S.S.</td>
+		<td align="left" colspan="3"><input type='text' id='NUMTARJSS' size='26' maxlength='50' class='inputTexto'  /></td>
+	</tr>
+	<tr>
+		<td align="right">Dirección</td>
+		<td align="left" colspan="3"><input type='text' id='DIRECCION' size='75' maxlength='255' class='inputTexto'  /></td>
+	</tr>
+	<tr>
+		<td align="right">Localidad</td>
+		<td align="left"><input type='text' id='LOCALIDAD' size='20' maxlength='255' class='inputTexto'  /></td>
+		<td align="right">Código Postal</td>
+		<td align="left"><input type='text' id='CODPOSTAL' size='20' class='inputTexto'  /></td>
+	</tr>
+	<tr>
+		<td align="right">Municipio</td>
+		<td align="left"><select id='CODMUNICIPIO' class='inputTexto' ><option value=''></option></select></td>
+		<td align="right">Provincia</td>
+		<td align="left"><select id='CODPROV' class='inputTexto' ><option value=''></option></select></td>
+	</tr>
+	<tr>
+		<td align="right">Fecha de nacimiento</td>
+		<td align="left"><input type='text' id='FECHANAC' size='12' maxlength='10' class='inputTexto' style='text-align: center'  /><img id='cal_FECHANAC' src='img/calendario20.gif' style='cursor: pointer;' onclick="return showCalendar('FECHANAC', '%d/%m/%Y');"/></td>
+		<td align="right">Lugar nac.</td>
+		<td align="left"><input type='text' id='LUGARNAC' size='30' maxlength='255' class='inputTexto'  /></td>
+	</tr>
+	<tr>
+		<td align="right">Teléfono móvil</td>
+		<td align="left"><input type='text' id='TLFMOVIL' size='20' maxlength='20' class='inputTexto'  /></td>
+		<td align="right">Teléfono fijo</td>
+		<td align="left"><input type='text' id='TLFFIJO' size='20' maxlength='20' class='inputTexto'  /></td>
+	</tr>
+	<tr>
+		<td align="right">Dir. correo electrónico</td>
+		<td align="left" colspan="3"><input type='text' id='EMAIL' size='26' maxlength='255' class='inputTexto'  /></td>
+	</tr>
+	<tr>
+		<td align="right">Cursos realizados</td>
+		<td align="left" colspan="3"><textarea id='CURSOS' class='inputTextoObligatorio' rows='2' cols='75'  onkeypress="javascript: return edicion.controlMaxLength(this, event, 1000);" ></textarea></td>
+	</tr>
+	<tr>
+		<td align="right">Titulación</td>
+		<td align="left"><input type='text' id='TITULACION' size='25' maxlength='255' class='inputTexto'  /></td>
+		<td align="right">Especialidad</td>
+		<td align="left"><input type='text' id='ESPECIALIDAD' size='20' maxlength='255' class='inputTexto'  /></td>
+	</tr>
+	<tr>
+		<td align="right">Universidad</td>
+		<td align="left" colspan="3"><input type='text' id='UNIVERSIDAD' size='26' maxlength='255' class='inputTexto'  /></td>
+	</tr>
+	<tr>
+		<td align="right"><b>Nº de horas de prácticas</b></td>
+		<td align="left" colspan="3"><input type='text' id='NUMHORASPRAC' size='20' class='inputTextoObligatorio'  /></td>
+	</tr>
+	<tr>
+		<td align="right">Servicio en el que desarrolla sus prácticas</td>
+		<td align="left" colspan="3"><input type='text' id='SERVICIOPRAC' size='75' maxlength='255' class='inputTexto'  /></td>
+	</tr>
+	<tr>
+		<td align="right">Actividades a desempeñar</td>
+		<td align="left" colspan="3"><textarea id='ACTIVIDADES' class='inputTexto' rows='2' cols='75'  onkeypress="javascript: return edicion.controlMaxLength(this, event, 1000);" ></textarea></td>
+	</tr>
+	<tr>
+		<td align="right">Idiomas</td>
+		<td align="left"><select id='CODIDIOMA1' class='inputTexto' ><option value=''></option></select></td>
+		<td align="right">Nivel</td>
+		<td align="left"><select id='CTIPONIVIDI1' class='inputTexto' ><option value=''></option></select></td>
+	</tr>
+	<tr>
+		<td align="right"></td>
+		<td align="left"><select id='CODIDIOMA2' class='inputTexto' ><option value=''></option></select></td>
+		<td align="right">Nivel</td>
+		<td align="left"><select id='CTIPONIVIDI2' class='inputTexto' ><option value=''></option></select></td>
+	</tr>
+	<tr>
+		<td align="right">Valoración</td>
+		<td align="left" colspan="3"><textarea id='VALORACION' class='inputTexto' rows='2' cols='75'  onkeypress="javascript: return edicion.controlMaxLength(this, event, 1000);" ></textarea></td>
+	</tr>
+</table>

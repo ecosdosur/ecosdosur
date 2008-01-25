@@ -1,0 +1,90 @@
+<table border='0' cellpadding='2' cellspacing='2' align='center' class='clTablaEdicion'>
+	<tr>
+		<td width="18%"></td>
+		<td width="35%"></td>
+		<td width="20%"></td>
+		<td width="27%"></td>
+	</tr>
+	<tr>
+		<td colspan="4" align="center"><b><font size="5">FICHA VOLUNTARIADO</font></b></td>
+	</tr>
+	<tr>
+		<td height="10px" colspan="4"></td>
+	</tr>
+	<tr>
+		<td align="right">Código</td>
+		<td align="left"><input type='text' id='CODVOLUNTARIO' size='10' class='inputTexto' readonly='readonly' /></td>
+		<td align="right">Fecha de la ficha</td>
+		<td align="left"><input type='text' id='FECHAFICHA' size='12' maxlength='10' class='inputTextoObligatorio' style='text-align: center'  /><img id="cal_FECHAFICHA" src='img/calendario20.gif' style='cursor: pointer;' onclick="return showCalendar('FECHAFICHA', '%d/%m/%Y');"/></td>
+	</tr>
+	<tr>
+		<td align="right">Apellidos</td>
+		<td align="left"><input type='text' id='APELLIDOS' size='35' maxlength='255' class='inputTextoObligatorio'  /></td>
+		<td align="right">Nombre</td><td align="left"><input type='text' id='NOMBRE' size='25' maxlength='50' class='inputTextoObligatorio'  /></td>
+	</tr>
+	<tr>
+		<td align="right">D.N.I.</td>
+		<td align="left" colspan="3"><input type='text' id='DNI' size='20' maxlength='20' class='inputTexto'  /></td>
+	</tr>
+	<tr>
+		<td align="right">Dirección</td>
+		<td align="left" colspan="3"><input type='text' id='DIRECCION' size='86' maxlength='255' class='inputTexto'  /></td>
+	</tr>
+	<tr>
+		<td align="right">Localidad</td>
+		<td align="left"><input type='text' id='LOCALIDAD' size='35' maxlength='100' class='inputTexto'  /></td>
+		<td align="right">C.P.</td>
+		<td align="left"><input type='text' id='CODPOSTAL' size='10' class='inputTexto'  /></td>
+	</tr>
+	<tr>
+		<td align="right">Municipio</td>
+		<td align="left"><select id='CODMUNICIPIO' class='inputTexto' ><option value=''></option></select></td>
+		<td align="right">Provincia</td>
+		<td align="left"><select id='CODPROV' class='inputTexto' ><option value=''></option></select></td>
+	</tr>
+	<tr>
+		<td align="right">Fecha de nacimiento</td>
+		<td align="left"><input type='text' id='FECHANAC' size='12' maxlength='10' class='inputTexto' style='text-align: center'  /><img id="cal_FECHANAC" src='img/calendario20.gif' style='cursor: pointer;' onclick="return showCalendar('FECHANAC', '%d/%m/%Y');"/></td>
+		<td align="right">Lugar de nacimiento</td>
+		<td align="left"><input type='text' id='LUGARNAC' size='25' maxlength='100' class='inputTexto'  /></td>
+	</tr>
+	<tr>
+		<td align="right">Teléfonos</td>
+		<td align="left"><input type='text' id='TELEFONO1' size='15' maxlength='20' class='inputTexto'  />&nbsp;<input type='text' id='TELEFONO2' size='15' maxlength='20' class='inputTexto'  /></td>
+		<td align="right">Dir. de correo e.</td>
+		<td align="left"><input type='text' id='EMAIL' size='25' maxlength='100' class='inputTexto'  /></td>
+	</tr>
+	<tr>
+		<td align="right">Estudios</td>
+		<td align="left"><input type='text' id='ESTUDIOS' size='34' maxlength='255' class='inputTexto'  /></td>
+		<td align="right">Profesión actual</td>
+		<td align="left"><input type='text' id='PROFESACT' size='25' maxlength='100' class='inputTexto'  /></td>
+	</tr>
+	<tr>
+		<td align="right">Labor en Ecos</td>
+		<td align="left"><textarea id='LABORECOS' class='inputTexto' rows='3' cols='34'  onkeypress="javascript: return edicion.controlMaxLength(this, event, 1000);" ></textarea></td>
+		<td align="right"><b>Horas dedicadas</b></td>
+		<td align="left"><input type='text' id='HORASDEDIC' size='10' class='inputTexto'  /></td>
+	</tr>
+	<tr>
+		<td align="right">Programa en el que colabora</td>
+		<td align="left" colspan="3"><input type='text' id='PROGCOLAB' size='86' maxlength='255' class='inputTexto'  /></td>
+	</tr>
+	<tr>
+		<td align="right">Disponibilidad (Horas y fechas)</td>
+		<td align="left" colspan="3"><input type='text' id='DISPONIBILIDAD' size='86' maxlength='255' class='inputTexto'  /></td>
+	</tr>
+	<tr>
+		<td align="right">Horario en el que colabora con la ONG</td>
+		<td align="left" colspan="3"><input type='text' id='HORARIO' size='86' maxlength='255' class='inputTexto'  /></td>
+	</tr>
+	<tr>
+		<td align="right">Fecha de comienzo en Ecos</td>
+		<td align="left"><input type='text' id='FECHAINIECOS' size='12' maxlength='10' class='inputTextoObligatorio' style='text-align: center'  /><img id="cal_FECHAINIECOS" src='img/calendario20.gif' style='cursor: pointer;' onclick="return showCalendar('FECHAINIECOS', '%d/%m/%Y');"/></td>
+		<td align="right">Fecha de finalización</td><td align="left"><input type='text' id='FECHAFINECOS' size='10' maxlength='12' class='inputTexto' style='text-align: center'  /><img id="cal_FECHAFINECOS" src='img/calendario20.gif' style='cursor: pointer;' onclick="return showCalendar('FECHAFINECOS', '%d/%m/%Y');"/></td>
+	</tr>
+	<tr>
+		<td align="right">Observaciones</td>
+		<td align="left" colspan="3"><textarea id='OBSERVACIONES' class='inputTexto' rows='3' cols='86'  onkeypress="javascript: return edicion.controlMaxLength(this, event, 1000);" ></textarea></td>
+	</tr>
+</table>

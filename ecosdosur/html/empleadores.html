@@ -1,0 +1,76 @@
+<table border='0' cellpadding='2' cellspacing='2' align='center' class='clTablaEdicion'>
+	<tr>
+		<td width="20%"></td>
+		<td width="30%"></td>
+		<td width="20%"></td>
+		<td width="30%"></td>
+	</tr>
+	<tr>
+		<td colspan="4" align="center"><b><font size="5">FICHA DE EMPLEADORES</font></b></td>
+	</tr>
+	<tr>	
+		<td colspan="4" height="10px"></td>
+	</tr>
+	<tr>
+		<td align="right">Código empleador</td>
+		<td align="left"><input type='text' id='CODEMP' size='10' class='inputTexto' readonly='readonly' /></td>
+		<td align="right">Tipo de empleador</td>
+		<td align="left"><select id='CTIPOEMP' class='inputTextoObligatorio' ><option value=''></option></select></td>
+	</tr>
+	<tr>
+		<td align="right">Nombre empleador</td>
+		<td align="left"><input type='text' id='NOMBRE' size='30' maxlength='50' class='inputTextoObligatorio'  /></td>
+		<td align="right">Apellidos empleador o Razón Social</td>
+		<td align="left"><input type='text' id='APELLIDOS' size='30' maxlength='255' class='inputTextoObligatorio'  /></td>
+	</tr>
+	<tr>
+		<td align="right">Dirección completa del empleo</td>
+		<td align="left " colspan="3"><input type='text' id='DIRECCION' size='88' maxlength='255' class='inputTexto'  /></td>
+	</tr>
+	<tr>
+		<td align="right">Localidad</td>
+		<td align="left " colspan="3"><input type='text' id='LOCALIDAD' size='88' maxlength='255' class='inputTexto'  /></td>
+	</tr>
+	<tr>
+		<td align="right">Municipio</td>
+		<td align="left"><select id='CODMUNICIPIO' class='inputTexto' ><option value=''></option></select></td>
+		<td align="right">Provincia</td>
+		<td align="left"><select id='CODPROV' class='inputTexto' ><option value=''></option></select></td>
+	</tr>
+	<tr>
+		<td align="right">Teléfono contacto 1</td><td align="left"><input type='text' id='TELEFONO1' size='30' maxlength='50' class='inputTexto'  /></td>
+		<td align="right">Teléfono contacto 2</td><td align="left"><input type='text' id='TELEFONO2' size='30' maxlength='50' class='inputTexto'  /></td>
+	</tr>
+	<tr>
+		<td colspan="4">
+			<table border='0' cellpadding='2' cellspacing='2' align='center' class='clTablaEdicion' style="border: 1px solid black;" width="80%">
+				<tr>
+					<td align="center"><input type='checkbox' id='BONO' onclick="javascript: if ( this.checked ) { document.getElementById('SOCIO').checked = false; };" />&nbsp;<b>BONO O PROVISIÓN</b></td>
+					<td align="left"><input type='checkbox' id='SOCIO' onclick="javascript: if ( this.checked ) { document.getElementById('BONO').checked = false; };" />&nbsp;Socio</td>
+				</tr>
+				<tr>
+					<td align="right">Aportación BONO (especificar cantidad)</td>
+					<td align="left"><input type='text' id='APORTBONO' size='30' class='inputTexto'  /></td>
+				</tr>
+				<tr>
+					<td align="right">Fecha aportación BONO O PROVISIÓN</td>
+					<td align="left"><input type='text' id='FECHAAPORT' size='12' maxlength='10' class='inputTexto' style='text-align: center'  /><img id="cal_FECHAAPORT" src='img/calendario20.gif' style='cursor: pointer;' onclick="return showCalendar('FECHAAPORT', '%d/%m/%Y');"/></td>
+				</tr>
+				<tr>
+					<td colspan="2">&nbsp;&nbsp;&nbsp;&nbsp;<b>Aportaciones posteriores:</b></td>
+				</tr>
+				<tr>
+					<td align="right">Aportación BONO (especificar cantidad)</td>
+					<td align="left"><input type='text' id='APORTBONO2' size='30' class='inputTexto'  /></td>
+				</tr>
+				<tr>
+					<td align="right">Fecha aportación BONO O PROVISIÓN</td>
+					<td align="left"><input type='text' id='FECHAAPORT2' size='12' maxlength='10' class='inputTexto' style='text-align: center'  /><img id="cal_FECHAAPORT2" src='img/calendario20.gif' style='cursor: pointer;' onclick="return showCalendar('FECHAAPORT2', '%d/%m/%Y');"/></td>
+				</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td align="center" colspan="4"><input type='checkbox' id='NOOFERTAS' />&nbsp;No aceptar ofertas de trabajo</td>
+	</tr>
+</table>
