@@ -163,13 +163,15 @@ class XMLSimple extends Contenedor implements iJSON {
 		// Atributos: 'error', definidos por el usuario y 'contenido'
 		if ( $this->bErrorVisible )  $json .= '"error": "' . str_replace('"', '\"', $this->error) . '", ';
 		foreach ( $this->arrayVariables as $variable=>$valor ) {
-			//$valor = str_replace("\r", ' ', $valor);
-			//$valor = str_replace("\n", ' ', $valor);
 			$valor = str_replace("\r", '\r', $valor);
 			$valor = str_replace("\n", '\n', $valor);
 			$json .= '"' . $variable . '": "' . str_replace('"', '\"', $valor) . '", ';
 		}
-		$json .= '"contenido": "' . str_replace('"', '\"', $this->contenido) . '"';
+		$contenido = str_replace('"', '\"', $this->contenido);
+		$contenido = str_replace("\r\n", '<br/>', $contenido);
+		$contenido = str_replace("\r", '<br/>', $contenido);
+		$contenido = str_replace("\n", '<br/>', $contenido);
+		$json .= '"contenido": "' . $contenido . '"';
 
 		// Nodos hijos (si los tiene)
 		if ( sizeof($this->arrayNodos) > 0 ) {
